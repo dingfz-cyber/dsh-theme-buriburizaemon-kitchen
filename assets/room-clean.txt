@@ -1,0 +1,1 @@
+Built-in image_gen edit of design-source.png: remove all interface text, message UI, navigation, input box, branding and left circular avatar; preserve cream paper, pale yellow sidebar and all right kitchen artwork at the original positions, including 今天也要好好吃饭！ decorative text. No new objects or relocated character. Original 1489 × 1056 composition.

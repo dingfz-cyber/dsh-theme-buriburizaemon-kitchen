@@ -1,0 +1,253 @@
+/* Selected reference: 1489 x 1056; sidebar 303, main canvas 1186.
+   The shell grid and both native resize handles belong to DSH. */
+body[data-buriburizaemon-kitchen] {
+  --kitch-scale:1;
+  --kitch-top-chrome:0px;
+  --kitch-u:calc(1px * var(--kitch-scale));
+  --kitch-paper:#fffdf4;
+  --kitch-sidebar:#fff3c7;
+  --kitch-ink:#542b1d;
+  --kitch-muted:#a7825c;
+  --kitch-line:#f2d7ad;
+  --dsw-font-family:"Microsoft YaHei UI","Microsoft YaHei","Segoe UI",sans-serif;
+  --dsw-specific-sidebar-fill:var(--kitch-paper)!important;
+  background:var(--kitch-paper);font-family:var(--dsw-font-family);
+}
+body[data-buriburizaemon-kitchen][data-ds-dark-theme] {
+  --kitch-paper:#2b2327;--kitch-sidebar:#3b2a2b;
+  --kitch-ink:#ffebe5;--kitch-muted:#d4b0a9;--kitch-line:#785158;
+}
+body[data-buriburizaemon-kitchen] .mP3x-q_sidebarCol {--dsw-specific-sidebar-fill:var(--kitch-sidebar);}
+body[data-buriburizaemon-kitchen] .mP3x-q_frame::before {
+  box-sizing:border-box;background:var(--kitch-paper);
+  border-inline-start:var(--dsh-windows-sidebar-width,0px) solid var(--kitch-sidebar);
+}
+body[data-buriburizaemon-kitchen] .mP3x-q_frame[data-sidebar-collapsed]::before {border-inline-start-width:0;}
+body[data-buriburizaemon-kitchen] .mP3x-q_centerCol {border-radius:0;}
+body[data-buriburizaemon-kitchen] [data-slot="main"] .an3WzG_root {
+  --kitch-art-start:max(0px,calc(574 * var(--kitch-u) - var(--kitch-top-chrome)));
+  isolation:isolate;container:kitch-main / inline-size;background:var(--kitch-paper);
+}
+body[data-buriburizaemon-kitchen] .an3WzG_header,body[data-buriburizaemon-kitchen] .an3WzG_body {z-index:1;}
+body[data-buriburizaemon-kitchen] .an3WzG_header {
+  position:relative;z-index:9;border:0;min-height:calc(94 * var(--kitch-u));
+  padding:calc(25 * var(--kitch-u)) calc(32 * var(--kitch-u)) calc(16 * var(--kitch-u));
+}
+body[data-buriburizaemon-kitchen] .an3WzG_header:where(:not(:has(.an3WzG_tabs))) {min-height:calc(94 * var(--kitch-u));padding-bottom:calc(16 * var(--kitch-u));}
+body[data-buriburizaemon-kitchen] .an3WzG_root[data-phase="hero"] .an3WzG_header {padding-left:calc(330 * var(--kitch-u));}
+body[data-buriburizaemon-kitchen] .an3WzG_root:not([data-phase="hero"])>.kitch-theme-label {display:none;}
+body[data-buriburizaemon-kitchen] .an3WzG_crumbCurrent {font-size:calc(27 * var(--kitch-u));line-height:1.4;font-weight:700;color:var(--kitch-ink);}
+body[data-buriburizaemon-kitchen] .an3WzG_titleRow,body[data-buriburizaemon-kitchen] .an3WzG_titleCluster,body[data-buriburizaemon-kitchen] .an3WzG_crumbs {min-width:0;}
+body[data-buriburizaemon-kitchen] .an3WzG_crumbCurrent {overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+body[data-buriburizaemon-kitchen] .an3WzG_body {
+  --dsh-chat-content-width:var(--dsh-chat-user-width,clamp(680px,calc(var(--dsh-conversation-column-width,0px) * .72),1020px));
+  --dsh-composer-card-max-width:100%;
+  --dsh-composer-side-clearance:calc(36 * var(--kitch-u));
+  --dsh-content-font-size:calc(21 * var(--kitch-u));
+  --dsh-content-font-delta:calc(21 * var(--kitch-u) - 14px);
+}
+body[data-buriburizaemon-kitchen] .an3WzG_scrollBody {background:transparent;scrollbar-width:thin;}
+/* Keep DSH's sticky composer background: its native fade becomes opaque
+   below the top edge and masks messages behind the input and status bar. */
+body[data-buriburizaemon-kitchen] .an3WzG_root[data-phase="active"] .an3WzG_composerSeat {
+  padding-bottom:calc(20 * var(--kitch-u));
+}
+body[data-buriburizaemon-kitchen] .an3WzG_root[data-phase="active"]>.kitch-room,
+body[data-buriburizaemon-kitchen] .an3WzG_root[data-phase="active"]>.kitch-original-art {opacity:.2;}
+/* Home composition: headline y=277, subtitle y=353, input y=431 at scale 1.
+   Workspace/mode controls remain available below the input. */
+body[data-buriburizaemon-kitchen] .an3WzG_root[data-phase="hero"] .an3WzG_scrollBody {justify-content:flex-start;scrollbar-gutter:auto;}
+body[data-buriburizaemon-kitchen] .an3WzG_root[data-phase="hero"] .an3WzG_composerSeat {padding-top:max(0px,calc(183 * var(--kitch-u) - var(--kitch-top-chrome)));}
+body[data-buriburizaemon-kitchen] .an3WzG_composerHero {width:100%;max-width:none;gap:calc(8 * var(--kitch-u));padding-bottom:calc(36 * var(--kitch-u));}
+body[data-buriburizaemon-kitchen] .WOwLGG_root {height:auto;flex:none;padding:0 calc(36 * var(--kitch-u));margin-bottom:calc(32 * var(--kitch-u));}
+body[data-buriburizaemon-kitchen] .WOwLGG_stack {max-width:none;gap:calc(8 * var(--kitch-u));}
+body[data-buriburizaemon-kitchen] .WOwLGG_headline {
+  position:relative;color:var(--kitch-ink);font-size:calc(56 * var(--kitch-u));font-weight:800;
+  line-height:calc(68 * var(--kitch-u));letter-spacing:calc(2 * var(--kitch-u));gap:0;
+}
+body[data-buriburizaemon-kitchen] .WOwLGG_titleGroup {gap:0;}
+body[data-buriburizaemon-kitchen] .WOwLGG_fishHitbox,body[data-buriburizaemon-kitchen] .WOwLGG_previewBadge {display:none;}
+
+body[data-buriburizaemon-kitchen] .WOwLGG_body {flex-direction:row;justify-content:center;align-items:center;gap:calc(17 * var(--kitch-u));}
+body[data-buriburizaemon-kitchen] .WOwLGG_body::before {
+  content:"今天也要好好吃饭";color:var(--kitch-muted);font-size:calc(26 * var(--kitch-u));
+  line-height:calc(38 * var(--kitch-u));font-weight:400;letter-spacing:calc(1 * var(--kitch-u));
+}
+
+body[data-buriburizaemon-kitchen] .an3WzG_heroWorkspaceRow {order:3;margin:0 calc(38 * var(--kitch-u));padding:0;min-height:28px;justify-content:flex-end;}
+body[data-buriburizaemon-kitchen] .an3WzG_heroOptions {margin-left:0;}
+body[data-buriburizaemon-kitchen] .an3WzG_heroWorkspaceRow button {color:var(--kitch-muted);}
+body[data-buriburizaemon-kitchen] .GRgSLq_root {box-sizing:border-box;width:100%;padding:0 calc(33 * var(--kitch-u)) 4px calc(36 * var(--kitch-u));}
+body[data-buriburizaemon-kitchen] [data-composer-card]:not(.GRgSLq_cardWorkspaceTrigger) {
+  display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:0;
+  width:100%;max-width:var(--dsh-composer-card-max-width);min-height:calc(133 * var(--kitch-u));
+  padding:calc(22 * var(--kitch-u)) calc(20 * var(--kitch-u)) calc(22 * var(--kitch-u)) calc(116 * var(--kitch-u));
+  background:var(--dsw-specific-input-major);border:calc(1.5 * var(--kitch-u)) solid var(--kitch-line);
+  border-radius:calc(48 * var(--kitch-u));box-shadow:0 7px 24px #d9927308;
+  font-size:calc(23 * var(--kitch-u));line-height:calc(34 * var(--kitch-u));
+}
+body[data-buriburizaemon-kitchen] .an3WzG_root :is(button,input,textarea,[contenteditable],.GRgSLq_placeholder,.WOwLGG_root) {
+  font-family:var(--dsw-font-family);
+}
+body[data-buriburizaemon-kitchen] .GRgSLq_card:not(.GRgSLq_cardWorkspaceTrigger)>.GRgSLq_scroll {grid-column:1;min-width:0;max-height:min(28vh,220px);margin:0;}
+body[data-buriburizaemon-kitchen] .GRgSLq_card:not(.GRgSLq_cardWorkspaceTrigger) .GRgSLq_input {padding:0;min-height:calc(36 * var(--kitch-u));line-height:calc(36 * var(--kitch-u));}
+body[data-buriburizaemon-kitchen] .GRgSLq_card:not(.GRgSLq_cardWorkspaceTrigger) .GRgSLq_placeholder {inset:0;line-height:calc(36 * var(--kitch-u));white-space:normal;display:block;}
+/* Only shorten an enabled, ordinary draft hint. Offline, scheduled-task,
+   disabled-session and workspace-selection instructions remain native. */
+body[data-buriburizaemon-kitchen] .GRgSLq_card:not(.GRgSLq_cardWorkspaceTrigger) [data-composer-input][contenteditable="true"]:not([aria-disabled="true"]):is([data-placeholder="发消息或创建任务, / 调用指令, @ 文件或对话"],[data-placeholder="描述你想要构建的内容, / 调用指令, @ 文件或对话"])+[data-composer-placeholder] {font-size:calc(23 * var(--kitch-u));color:transparent;}
+body[data-buriburizaemon-kitchen] .GRgSLq_card:not(.GRgSLq_cardWorkspaceTrigger) [data-composer-input][contenteditable="true"]:not([aria-disabled="true"]):is([data-placeholder="发消息或创建任务, / 调用指令, @ 文件或对话"],[data-placeholder="描述你想要构建的内容, / 调用指令, @ 文件或对话"])+[data-composer-placeholder]::before {content:"发消息或创建任务…";position:absolute;inset:0 auto auto 0;color:var(--dsw-alias-label-caption);font-size:calc(23 * var(--kitch-u));}
+body[data-buriburizaemon-kitchen] .GRgSLq_card:not(.GRgSLq_cardWorkspaceTrigger)>.GRgSLq_row {grid-column:2;flex-wrap:nowrap;padding:0;margin-left:calc(18 * var(--kitch-u));gap:calc(16 * var(--kitch-u));container-type:normal;}
+body[data-buriburizaemon-kitchen] .GRgSLq_card:not(.GRgSLq_cardWorkspaceTrigger) .GRgSLq_add {
+  position:absolute;left:calc(24 * var(--kitch-u));top:50%;transform:translateY(-50%);
+  width:calc(56 * var(--kitch-u));height:calc(60 * var(--kitch-u));background:transparent;border-radius:calc(24 * var(--kitch-u));
+}
+
+
+body[data-buriburizaemon-kitchen] .GRgSLq_card:not(.GRgSLq_cardWorkspaceTrigger) .GRgSLq_primary {position:relative;width:calc(66 * var(--kitch-u));height:calc(66 * var(--kitch-u));transform:none;background:#eea327;}
+
+
+body[data-buriburizaemon-kitchen] .GRgSLq_card:not(.GRgSLq_cardWorkspaceTrigger) .GRgSLq_primary>svg {width:calc(29 * var(--kitch-u));height:calc(29 * var(--kitch-u));}
+body[data-buriburizaemon-kitchen] .GRgSLq_card:not(.GRgSLq_cardWorkspaceTrigger) .GRgSLq_standardControls {gap:calc(16 * var(--kitch-u));}
+body[data-buriburizaemon-kitchen] .GRgSLq_card:not(.GRgSLq_cardWorkspaceTrigger) [data-slot="conversation.input.model"] button {
+  border:1px solid var(--kitch-line);border-radius:999px;min-height:calc(48 * var(--kitch-u));
+  padding:calc(9 * var(--kitch-u)) calc(20 * var(--kitch-u));background:#fffdf6;
+  font-size:calc(18 * var(--kitch-u));color:var(--kitch-ink);
+}
+body[data-buriburizaemon-kitchen] .GRgSLq_card:not(.GRgSLq_cardWorkspaceTrigger)>.GRgSLq_accessory,
+body[data-buriburizaemon-kitchen] .GRgSLq_card:not(.GRgSLq_cardWorkspaceTrigger)>[data-slot="conversation.input.attachments"] {grid-column:1/-1;min-width:0;}
+body[data-buriburizaemon-kitchen] .GRgSLq_card:not(.GRgSLq_cardWorkspaceTrigger) .GRgSLq_modes {position:absolute;left:calc(24 * var(--kitch-u));top:calc(100% + 6px);font-size:11px;}
+body[data-buriburizaemon-kitchen] .GRgSLq_card:not(.GRgSLq_cardWorkspaceTrigger) .GRgSLq_tools {gap:0;}
+body[data-buriburizaemon-kitchen] .GRgSLq_dock {align-self:center;}
+body[data-buriburizaemon-kitchen] .V4vHZW_scroll {padding:calc(24 * var(--kitch-u)) calc(40 * var(--kitch-u));}
+body[data-buriburizaemon-kitchen] .V4vHZW_column {max-width:min(100%,var(--dsh-chat-content-width));}
+body[data-buriburizaemon-kitchen] .LOmM4q_userStack {max-width:85%;}
+body[data-buriburizaemon-kitchen] .LOmM4q_bubble {border-radius:calc(26 * var(--kitch-u));padding:calc(20 * var(--kitch-u)) calc(24 * var(--kitch-u));line-height:1.65;}
+body[data-buriburizaemon-kitchen] [data-chat-flow-kind="assistant-step"] .xMeOpW_body {
+  box-sizing:border-box;width:100%;min-width:0;max-width:100%;padding:0;
+  border:0;border-radius:0;background:transparent;box-shadow:none;line-height:1.75;
+}
+body[data-buriburizaemon-kitchen] .md-table-wide {width:100%;max-width:100%;margin-left:0;padding-left:0;overflow-x:auto;}
+/* SlotOutlet is display:contents, so the attachment rail itself must span
+   the grid. Drafts with attachments use the native stacked control flow. */
+body[data-buriburizaemon-kitchen] .GRgSLq_card:not(.GRgSLq_cardWorkspaceTrigger)>[data-slot="conversation.input.attachments"]>* {
+  grid-column:1/-1;min-width:0;max-width:100%;
+}
+body[data-buriburizaemon-kitchen] .GRgSLq_card:not(.GRgSLq_cardWorkspaceTrigger):has([data-slot="conversation.input.attachments"]>*) {
+  display:flex;flex-direction:column;align-items:stretch;padding:16px;gap:12px;
+}
+body[data-buriburizaemon-kitchen] .GRgSLq_card:not(.GRgSLq_cardWorkspaceTrigger):has([data-slot="conversation.input.attachments"]>*)>.GRgSLq_scroll {
+  width:100%;
+}
+body[data-buriburizaemon-kitchen] .GRgSLq_card:not(.GRgSLq_cardWorkspaceTrigger):has([data-slot="conversation.input.attachments"]>*)>.GRgSLq_row {
+  width:100%;margin-left:0;flex-wrap:wrap;
+}
+body[data-buriburizaemon-kitchen] .GRgSLq_card:not(.GRgSLq_cardWorkspaceTrigger):has([data-slot="conversation.input.attachments"]>*) .GRgSLq_add {
+  position:relative;inset:auto;transform:none;
+}
+body[data-buriburizaemon-kitchen] .GRgSLq_card:not(.GRgSLq_cardWorkspaceTrigger):has([data-slot="conversation.input.attachments"]>*) .GRgSLq_modes {
+  position:static;
+}
+/* Native task/stop/permission states retain their own controls and icons. */
+body[data-buriburizaemon-kitchen] .GRgSLq_card:not(.GRgSLq_cardWorkspaceTrigger):has(.GRgSLq_trailingActive) {display:flex!important;padding:16px!important;gap:8px;}
+body[data-buriburizaemon-kitchen] .GRgSLq_card:not(.GRgSLq_cardWorkspaceTrigger):has(.GRgSLq_trailingActive)>.GRgSLq_row {margin-left:0;width:100%;flex-wrap:wrap;}
+body[data-buriburizaemon-kitchen] .GRgSLq_card:not(.GRgSLq_cardWorkspaceTrigger):has(.GRgSLq_trailingActive) .GRgSLq_add {position:relative;inset:auto;transform:none;}
+body[data-buriburizaemon-kitchen] .GRgSLq_card:not(.GRgSLq_cardWorkspaceTrigger):has(.GRgSLq_trailingActive) .GRgSLq_modes {position:static;}
+body[data-buriburizaemon-kitchen] .GRgSLq_card:not(.GRgSLq_cardWorkspaceTrigger):has(.GRgSLq_trailingActive)>.GRgSLq_scroll {width:100%;}
+@container kitch-main (max-width:720px) {
+  body[data-buriburizaemon-kitchen] .an3WzG_root .an3WzG_composerSeat {padding-top:0;}
+  body[data-buriburizaemon-kitchen] .an3WzG_composerHero {padding-top:calc(100 * var(--kitch-u));}
+  body[data-buriburizaemon-kitchen] .WOwLGG_headline {font-size:calc(43 * var(--kitch-u));line-height:1.3;}
+  body[data-buriburizaemon-kitchen] .WOwLGG_headline::after {display:none;}
+  body[data-buriburizaemon-kitchen] .GRgSLq_card:not(.GRgSLq_cardWorkspaceTrigger) {display:flex;padding:16px;gap:12px;border-radius:26px;}
+  body[data-buriburizaemon-kitchen] .GRgSLq_card:not(.GRgSLq_cardWorkspaceTrigger)>.GRgSLq_scroll {width:100%;}
+  body[data-buriburizaemon-kitchen] .GRgSLq_card:not(.GRgSLq_cardWorkspaceTrigger)>.GRgSLq_row {width:100%;margin-left:0;flex-wrap:wrap;}
+  body[data-buriburizaemon-kitchen] .GRgSLq_card:not(.GRgSLq_cardWorkspaceTrigger) .GRgSLq_add {position:relative;left:auto;top:auto;transform:none;}
+  body[data-buriburizaemon-kitchen] .GRgSLq_card:not(.GRgSLq_cardWorkspaceTrigger) .GRgSLq_modes {position:static;}
+  body[data-buriburizaemon-kitchen] .an3WzG_heroWorkspaceRow {margin-top:8px;}
+}
+@container kitch-main (max-width:440px) {
+  body[data-buriburizaemon-kitchen] .an3WzG_header {padding-inline:14px;}
+  body[data-buriburizaemon-kitchen] .an3WzG_root[data-phase="hero"] .an3WzG_header {padding-top:calc(82 * var(--kitch-u));padding-left:14px;}
+  body[data-buriburizaemon-kitchen] .GRgSLq_root {padding-inline:14px;}
+  body[data-buriburizaemon-kitchen] .WOwLGG_headline {font-size:25px;letter-spacing:0;}
+  body[data-buriburizaemon-kitchen] .V4vHZW_scroll {padding-inline:14px;}
+}
+@media (max-height:620px) {
+  body[data-buriburizaemon-kitchen] .an3WzG_root[data-phase="hero"] .an3WzG_composerSeat {padding-top:calc(58 * var(--kitch-u));}
+  body[data-buriburizaemon-kitchen] .an3WzG_composerHero {padding-top:0;}
+  body[data-buriburizaemon-kitchen] .WOwLGG_root {margin-bottom:calc(18 * var(--kitch-u));}
+}
+body[data-buriburizaemon-kitchen][data-ds-dark-theme] .kitch-room,
+body[data-buriburizaemon-kitchen][data-ds-dark-theme] .kitch-original-art {opacity:.2;}
+body[data-buriburizaemon-kitchen][data-ds-dark-theme] .kitch-theme-label {filter:brightness(.65) saturate(.7);}
+body[data-buriburizaemon-kitchen][data-ds-dark-theme] .GRgSLq_card:not(.GRgSLq_cardWorkspaceTrigger) [data-slot="conversation.input.model"] button {background:#3d2c32;}
+@media (forced-colors:active) {
+  .kitch-room,.kitch-original-art,.kitch-theme-label,.kitch-brand,.kitch-sidebar-art {display:none;}
+  body[data-buriburizaemon-kitchen] .WOwLGG_headline::after,body[data-buriburizaemon-kitchen] .WOwLGG_body::after,
+  body[data-buriburizaemon-kitchen] .GRgSLq_add::after,body[data-buriburizaemon-kitchen] .GRgSLq_primary::before {display:none;}
+  body[data-buriburizaemon-kitchen] .GRgSLq_card:not(.GRgSLq_cardWorkspaceTrigger) .GRgSLq_add>svg,body[data-buriburizaemon-kitchen] .GRgSLq_primary>svg {visibility:visible;}
+  body[data-buriburizaemon-kitchen] .wtg9ga_brandIdentity {opacity:1;}
+}
+
+/* Kitchen reference: 1489 × 1056, sidebar 310. Reserve the right illustration
+   when the main pane is wide; narrow panes prioritize native controls. */
+body[data-buriburizaemon-kitchen] .kitch-room {
+ position:absolute;inset:0;z-index:-1;pointer-events:none;user-select:none;
+ background-repeat:no-repeat;background-size:126.29347% 100%;background-position:right bottom;
+}
+body[data-buriburizaemon-kitchen] .an3WzG_root[data-phase="active"]>.kitch-room {opacity:1;}
+body[data-buriburizaemon-kitchen] .an3WzG_body {margin-right:calc(340 * var(--kitch-u));}
+body[data-buriburizaemon-kitchen] .an3WzG_header {padding-right:calc(335 * var(--kitch-u));}
+body[data-buriburizaemon-kitchen] .an3WzG_root[data-phase="hero"] .an3WzG_header {padding-left:24px;}
+body[data-buriburizaemon-kitchen] .V4vHZW_scroll {padding-left:calc(115 * var(--kitch-u));padding-right:calc(22 * var(--kitch-u));}
+body[data-buriburizaemon-kitchen] [data-composer-card]:not(.GRgSLq_cardWorkspaceTrigger) {
+ min-height:calc(94 * var(--kitch-u));border-radius:calc(30 * var(--kitch-u));
+ padding:calc(18 * var(--kitch-u)) calc(18 * var(--kitch-u)) calc(18 * var(--kitch-u)) calc(72 * var(--kitch-u));
+}
+body[data-buriburizaemon-kitchen] .GRgSLq_card:not(.GRgSLq_cardWorkspaceTrigger) .GRgSLq_add {left:calc(15 * var(--kitch-u));width:calc(42 * var(--kitch-u));height:calc(50 * var(--kitch-u));}
+body[data-buriburizaemon-kitchen] .GRgSLq_card:not(.GRgSLq_cardWorkspaceTrigger) .GRgSLq_primary {width:calc(56 * var(--kitch-u));height:calc(56 * var(--kitch-u));}
+body[data-buriburizaemon-kitchen] .GRgSLq_card:not(.GRgSLq_cardWorkspaceTrigger) .GRgSLq_add>svg {width:calc(26 * var(--kitch-u));height:calc(26 * var(--kitch-u));}
+body[data-buriburizaemon-kitchen] .an3WzG_root[data-phase="active"] .an3WzG_composerSeat {padding-bottom:calc(28 * var(--kitch-u));}
+body[data-buriburizaemon-kitchen] .WOwLGG_headline {font-size:calc(44 * var(--kitch-u));line-height:1.35;letter-spacing:0;}
+body[data-buriburizaemon-kitchen] .WOwLGG_body::before {font-size:calc(23 * var(--kitch-u));}
+@container kitch-main (max-width:900px) {
+ body[data-buriburizaemon-kitchen] .an3WzG_body {margin-right:0;}
+ body[data-buriburizaemon-kitchen] .an3WzG_header {padding-right:24px;}
+ body[data-buriburizaemon-kitchen] .an3WzG_root[data-phase="active"]>.kitch-room {opacity:.16;}
+ body[data-buriburizaemon-kitchen] .V4vHZW_scroll {padding-inline:24px;}
+}
+@container kitch-main (max-width:720px) {
+ body[data-buriburizaemon-kitchen] .GRgSLq_card:not(.GRgSLq_cardWorkspaceTrigger) {padding:16px;}
+ body[data-buriburizaemon-kitchen] .GRgSLq_card:not(.GRgSLq_cardWorkspaceTrigger) .GRgSLq_add {left:auto;}
+}
+body[data-buriburizaemon-kitchen][data-ds-dark-theme] .an3WzG_root>.kitch-room {opacity:.14;}
+/* Keep the original illustration proportions at every window width. */
+body[data-buriburizaemon-kitchen] .kitch-room {background-size:calc(1489 * var(--kitch-u)) calc(1056 * var(--kitch-u));}
+body[data-buriburizaemon-kitchen] .kitch-brand {mix-blend-mode:multiply;clip-path:polygon(0 0,100% 0,100% 100%,60% 100%,60% 65%,0 65%);}
+body[data-buriburizaemon-kitchen] .kitch-room {clip-path:inset(0 0 0 max(0px,calc(100% - 1179 * var(--kitch-u))));}
+body[data-buriburizaemon-kitchen] .an3WzG_body {margin-right:calc(470 * var(--kitch-u));}
+@container kitch-main (max-width:900px) {
+ body[data-buriburizaemon-kitchen] .an3WzG_body {margin-right:0;}
+}
+/* Fade the reading paper into the scene instead of cutting a vertical edge. */
+body[data-buriburizaemon-kitchen] .an3WzG_root[data-phase="active"] .an3WzG_body {
+ background:linear-gradient(to right,var(--kitch-paper) 0%,color-mix(in srgb,var(--kitch-paper) 96%,transparent) calc(100% - 180 * var(--kitch-u)),transparent 100%);
+}
+body[data-buriburizaemon-kitchen] .an3WzG_root[data-phase="active"] .an3WzG_composerSeat {
+ background:linear-gradient(to right,var(--kitch-paper) calc(100% - 40 * var(--kitch-u)),transparent 100%);
+}
+@container kitch-main (max-width:900px) {
+ body[data-buriburizaemon-kitchen] .an3WzG_root[data-phase="active"] .an3WzG_body {background:transparent;}
+}
+body[data-buriburizaemon-kitchen] .an3WzG_body {container:kitch-body / inline-size;}
+@container kitch-body (max-width:720px) {
+ body[data-buriburizaemon-kitchen] .GRgSLq_card:not(.GRgSLq_cardWorkspaceTrigger) {display:flex;flex-direction:column;align-items:stretch;padding:16px;gap:12px;}
+ body[data-buriburizaemon-kitchen] .GRgSLq_card:not(.GRgSLq_cardWorkspaceTrigger)>.GRgSLq_scroll {width:100%;}
+ body[data-buriburizaemon-kitchen] .GRgSLq_card:not(.GRgSLq_cardWorkspaceTrigger)>.GRgSLq_row {width:100%;margin-left:0;flex-wrap:wrap;}
+ body[data-buriburizaemon-kitchen] .GRgSLq_card:not(.GRgSLq_cardWorkspaceTrigger) .GRgSLq_add {position:relative;inset:auto;transform:none;}
+ body[data-buriburizaemon-kitchen] .GRgSLq_card:not(.GRgSLq_cardWorkspaceTrigger) .GRgSLq_modes {position:static;}
+}
+body[data-buriburizaemon-kitchen] .V4vHZW_column :is(p,li,ul,ol,span,strong,h1,h2,h3) {font-family:var(--dsw-font-family);}
+body[data-buriburizaemon-kitchen] :is(.xMeOpW_body,.LOmM4q_bubble,.V4vHZW_column) {font-family:"Microsoft YaHei UI","Microsoft YaHei","Segoe UI",sans-serif;}
+body[data-buriburizaemon-kitchen] .xMeOpW_body :is(p,li,ul,ol,span,strong,h1,h2,h3) {font-family:"Microsoft YaHei UI","Microsoft YaHei","Segoe UI",sans-serif;}
+body[data-buriburizaemon-kitchen] .xMeOpW_body :is(p,li,span,strong,h1,h2,h3),body[data-buriburizaemon-kitchen] .LOmM4q_bubble {font-family:"Microsoft YaHei UI","Microsoft YaHei","Segoe UI",sans-serif!important;}

@@ -1,0 +1,222 @@
+/* Measurements follow the 1489 × 1056 source artwork. The host still owns
+   the sidebar column width, persisted resize state, and resize handle. */
+body[data-buriburizaemon-kitchen] .mP3x-q_sidebarCol {
+  --dsw-specific-sidebar-fill:var(--kitch-sidebar,#fff3c7);
+}
+body[data-buriburizaemon-kitchen] .wtg9ga_root:not(.wtg9ga_collapsed) {
+  --dsh-sidebar-inline-padding:calc(23 * var(--kitch-u));
+  box-sizing:border-box;
+  min-width:0;
+  padding:0 calc(19 * var(--kitch-u)) calc(28 * var(--kitch-u)) var(--dsh-sidebar-inline-padding);
+  background:var(--kitch-sidebar,#fff3c7);
+  color:var(--kitch-ink,#542b1d);
+  font-size:calc(20 * var(--kitch-u));
+  font-family:var(--dsw-font-family,"Microsoft YaHei UI","Microsoft YaHei","Segoe UI",sans-serif);
+}
+body[data-buriburizaemon-kitchen] .wtg9ga_root :is(button,input) {
+  font-family:inherit;
+}
+
+/* Only the decorative brand is replaced; the native brand action and
+   collapse control keep their existing hit targets and keyboard behavior. */
+body[data-buriburizaemon-kitchen] .wtg9ga_root:not(.wtg9ga_collapsed) .wtg9ga_logoRow {
+  position:relative;
+  container-type:inline-size;
+  flex:none;
+  /* The source's y=153 includes the top of the window. DSH already reserves
+     its native title bar before this root; do not count that space twice. */
+  height:max(calc(92 * var(--kitch-u)),calc(135 * var(--kitch-u) - var(--kitch-top-chrome,0px)));
+  margin:0;
+  padding:0;
+  border:0;
+  overflow:visible;
+}
+body[data-buriburizaemon-kitchen] .wtg9ga_root:not(.wtg9ga_collapsed) .wtg9ga_brand {
+  position:relative;
+  height:calc(95 * var(--kitch-u));
+  padding:0;
+  min-width:0;
+}
+body[data-buriburizaemon-kitchen] .wtg9ga_root:not(.wtg9ga_collapsed) .wtg9ga_brandIdentity {
+  opacity:0;
+}
+body[data-buriburizaemon-kitchen] .kitch-brand {
+  --kitch-brand-top:max(0px,calc(20 * var(--kitch-u) - var(--kitch-top-chrome,0px)));
+  --kitch-brand-room:max(calc(80 * var(--kitch-u)),calc(135 * var(--kitch-u) - var(--kitch-top-chrome,0px) - var(--kitch-brand-top)));
+  --kitch-brand-u:min(var(--kitch-u),calc(100cqw / 315),calc(var(--kitch-brand-room) / 95));
+  position:absolute;
+  left:calc(-3 * var(--kitch-u));
+  top:var(--kitch-brand-top);
+  width:calc(315 * var(--kitch-brand-u));
+  height:calc(95 * var(--kitch-brand-u));
+  background-repeat:no-repeat;
+  background-size:calc(1489 * var(--kitch-brand-u)) calc(1056 * var(--kitch-brand-u));
+  background-position:calc(-25 * var(--kitch-brand-u)) calc(-25 * var(--kitch-brand-u));
+  pointer-events:none;
+  user-select:none;
+}
+body[data-buriburizaemon-kitchen] .wtg9ga_collapsed .kitch-brand,
+body[data-buriburizaemon-kitchen] .wtg9ga_collapsed .kitch-sidebar-art {
+  display:none;
+}
+
+body[data-buriburizaemon-kitchen] .wtg9ga_root:not(.wtg9ga_collapsed) .wtg9ga_newSession {
+  height:calc(66 * var(--kitch-u));
+  margin:0 0 calc(15 * var(--kitch-u));
+  padding:0 calc(25 * var(--kitch-u));
+  border:0;
+  border-radius:calc(20 * var(--kitch-u));
+  background:#eea327;
+  box-shadow:none;
+  color:#fff;
+  font-size:calc(20 * var(--kitch-u));
+  font-weight:600;
+  --dsw-alias-label-primary:#fff;
+}
+body[data-buriburizaemon-kitchen] .wtg9ga_root:not(.wtg9ga_collapsed) .wtg9ga_newSession:hover {
+  background:#df901c;
+}
+body[data-buriburizaemon-kitchen] .wtg9ga_root:not(.wtg9ga_collapsed) .wtg9ga_newSessionContent {
+  justify-content:flex-start;
+  gap:calc(17 * var(--kitch-u));
+}
+body[data-buriburizaemon-kitchen] .wtg9ga_root:not(.wtg9ga_collapsed) .wtg9ga_newSessionContent>svg {
+  width:calc(28 * var(--kitch-u));
+  height:calc(28 * var(--kitch-u));
+}
+body[data-buriburizaemon-kitchen] .wtg9ga_root:not(.wtg9ga_collapsed) .wtg9ga_panelList {
+  gap:0;
+  margin:0 calc(8 * var(--kitch-u)) calc(16 * var(--kitch-u));
+  padding-bottom:calc(12 * var(--kitch-u));
+  border-bottom:1px solid #efdb9f;
+}
+body[data-buriburizaemon-kitchen] .wtg9ga_root:not(.wtg9ga_collapsed) .wtg9ga_panelRow {
+  min-height:calc(54 * var(--kitch-u));
+  margin:0 calc(-8 * var(--kitch-u));
+  padding:0 calc(22 * var(--kitch-u));
+  gap:calc(23 * var(--kitch-u));
+  border-radius:calc(12 * var(--kitch-u));
+  color:var(--kitch-ink,#542b1d);
+  font-size:calc(21 * var(--kitch-u));
+  line-height:1.4;
+}
+body[data-buriburizaemon-kitchen] .wtg9ga_root:not(.wtg9ga_collapsed) .wtg9ga_panelGlyph svg {
+  width:calc(26 * var(--kitch-u));
+  height:calc(26 * var(--kitch-u));
+}
+
+/* The native history list owns scrolling. Its reserved flex basis is spent
+   before the decorative footer so added sessions cannot be squeezed away. */
+body[data-buriburizaemon-kitchen] .wtg9ga_root:not(.wtg9ga_collapsed) .wtg9ga_regionArea {
+  flex:1 0 min(calc(264 * var(--kitch-u)),30vh);
+  min-height:0;
+}
+body[data-buriburizaemon-kitchen] .wtg9ga_root:not(.wtg9ga_collapsed) .GAkraW_sectionHeader {
+  height:calc(32 * var(--kitch-u));
+  margin:0;
+  padding-left:calc(15 * var(--kitch-u));
+  font-size:calc(16 * var(--kitch-u));
+}
+body[data-buriburizaemon-kitchen] .wtg9ga_root:not(.wtg9ga_collapsed) .GAkraW_sectionLabel {
+  font-size:inherit;
+  color:#a38a62;
+}
+body[data-buriburizaemon-kitchen] .wtg9ga_root:not(.wtg9ga_collapsed) .wnFoaW_sessionRow {
+  box-sizing:border-box;
+  height:calc(42 * var(--kitch-u));
+  min-height:calc(42 * var(--kitch-u));
+  padding-top:0;
+  padding-bottom:0;
+  border-radius:calc(12 * var(--kitch-u));
+  font-size:calc(18 * var(--kitch-u));
+}
+body[data-buriburizaemon-kitchen] .wtg9ga_root:not(.wtg9ga_collapsed) :is(.wnFoaW_sessionRow,.wnFoaW_projectRow) .wnFoaW_title {
+  font-family:inherit;
+  font-size:calc(18 * var(--kitch-u));
+  line-height:calc(26 * var(--kitch-u));
+}
+body[data-buriburizaemon-kitchen] .wnFoaW_sessionRow.wnFoaW_selected {
+  background:#ffe2a1;
+}
+body[data-buriburizaemon-kitchen] .wnFoaW_sessionRow.wnFoaW_selected [class$="_title"] {
+  color:var(--kitch-ink,#542b1d);
+  font-weight:600;
+}
+
+/* Both footer ancestors may shrink. The entire source crop scales together
+   inside the available box and never extends over the native resize edge. */
+body[data-buriburizaemon-kitchen] .wtg9ga_footArea:has(.kitch-sidebar-art) {
+  flex:0 1 auto;
+  min-height:calc(64 * var(--kitch-u));
+}
+body[data-buriburizaemon-kitchen] .wtg9ga_footerActions:has(.kitch-sidebar-art) {
+  box-sizing:border-box;
+  container-type:size;
+  flex:0 1 calc(242 * var(--kitch-u));
+  height:calc(242 * var(--kitch-u));
+  min-height:0;
+  width:100%;
+  padding-bottom:calc(12 * var(--kitch-u));
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+}
+body[data-buriburizaemon-kitchen] [data-slot="sidebar.footer.action"]:has(.kitch-sidebar-art) {
+  min-width:0;
+  width:100%;
+}
+body[data-buriburizaemon-kitchen] .kitch-sidebar-art {
+  --kitch-art-u:min(var(--kitch-u),calc(100cqw / 270),calc(100cqh / 270));
+  position:relative;
+  flex:0 1 auto;
+  width:calc(270 * var(--kitch-art-u));
+  height:calc(270 * var(--kitch-art-u));
+  max-width:100%;
+  max-height:calc(270 * var(--kitch-u));
+  aspect-ratio:270 / 270;
+  margin-inline:auto;
+  pointer-events:none;
+  user-select:none;
+}
+body[data-buriburizaemon-kitchen] .kitch-sidebar-crop {
+  position:relative;
+  display:block;
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  pointer-events:none;
+  user-select:none;
+}
+body[data-buriburizaemon-kitchen] .kitch-sidebar-crop>img {
+  position:absolute;
+  width:551.481481%;
+  max-width:none;
+  height:auto;
+  left:-9.259259%;
+  top:-250%;
+  pointer-events:none;
+  user-select:none;
+}
+body[data-buriburizaemon-kitchen] .wtg9ga_root:not(.wtg9ga_collapsed) .wtg9ga_settingsArea {
+  box-sizing:border-box;
+  min-height:calc(64 * var(--kitch-u));
+  width:calc(100% - 16 * var(--kitch-u));
+  margin-inline:calc(8 * var(--kitch-u));
+  padding:calc(16 * var(--kitch-u)) calc(5 * var(--kitch-u)) 0;
+  border-top:1px solid #efdb9f;
+}
+
+@media (max-height:620px) {
+  body[data-buriburizaemon-kitchen] .wtg9ga_footerActions:has(.kitch-sidebar-art) {display:none;}
+  body[data-buriburizaemon-kitchen] .wtg9ga_root:not(.wtg9ga_collapsed) {padding-bottom:8px;}
+  body[data-buriburizaemon-kitchen] .wtg9ga_root:not(.wtg9ga_collapsed) .wtg9ga_logoRow {height:calc(92 * var(--kitch-u));overflow:hidden;}
+  body[data-buriburizaemon-kitchen] .kitch-brand {top:calc(8 * var(--kitch-u));height:calc(67 * var(--kitch-brand-u));}
+  body[data-buriburizaemon-kitchen] .wtg9ga_root:not(.wtg9ga_collapsed) .wtg9ga_newSession {margin-bottom:8px;}
+  body[data-buriburizaemon-kitchen] .wtg9ga_root:not(.wtg9ga_collapsed) .wtg9ga_panelList {margin-bottom:8px;padding-bottom:8px;}
+}
+@media (forced-colors:active) {
+  body[data-buriburizaemon-kitchen] .kitch-brand,
+  body[data-buriburizaemon-kitchen] .kitch-sidebar-art {display:none;}
+  body[data-buriburizaemon-kitchen] .wtg9ga_root:not(.wtg9ga_collapsed) .wtg9ga_brandIdentity {opacity:1;}
+  body[data-buriburizaemon-kitchen] .wtg9ga_footerActions:has(.kitch-sidebar-art) {display:none;}
+}

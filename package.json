@@ -1,0 +1,56 @@
+{
+  "name": "dsh-theme-buriburizaemon-kitchen",
+  "version": "1.0.0",
+  "private": true,
+  "description": "肥嘟嘟左卫门·暖黄厨房 — 原图插画、暖黄界面与原生无头像聊天布局。",
+  "author": "dingfz-cyber",
+  "homepage": "https://github.com/dingfz-cyber/dsh-theme-buriburizaemon-kitchen#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dingfz-cyber/dsh-theme-buriburizaemon-kitchen.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dingfz-cyber/dsh-theme-buriburizaemon-kitchen/issues"
+  },
+  "license": "UNLICENSED",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "assets",
+    "locale",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "RELEASE_NOTES.md",
+    "preview"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node --check lib/index.js && node --check lib/client.js",
+    "verify": "node scripts/verify.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-theme",
+        "@deepseek-ai/dsh-client-ui-renderer",
+        "@deepseek-ai/dsh-client-ui-sidebar"
+      ],
+      "platform": "web",
+      "immediately": true
+    }
+  }
+}
